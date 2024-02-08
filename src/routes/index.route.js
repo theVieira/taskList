@@ -23,7 +23,22 @@ router.post('/', async (req, res) => {
 		
 		res
 			.status(200)
-			.json({ newTask: newTask });
+			.json({ created: newTask });
+
+	} catch (e) {
+		res
+			.status(422)
+			.json({ error: e });
+	}
+});
+
+router.delete('/:id', async (req, res) => {
+	try {
+		const { id } = req.params;
+		const task = await Task.findByIdAndDelete(id);
+		res	
+			.status(200)
+			.json({ deleted: task });
 
 	} catch (e) {
 		res
