@@ -17,4 +17,7 @@ Tem como objetivo organizar as tarefas do dia
 
 ##### POST: '/'
 ##### |req.body { title }| -> Parâmetro requerido (JSON)
-##### Retorna a tarefa criada
+##### Cria uma tarefa e retorna a mesma
+
+##### DELETE: '/:id'
+##### Deleta uma tarefa e retorna a mesma
