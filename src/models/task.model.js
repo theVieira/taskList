@@ -1,9 +1,8 @@
-const { Schema, default: mongoose } = require('mongoose');
+const mongoose = require('mongoose');
 
-const taskSchema = new Schema({
+const taskSchema = mongoose.Schema({
 	title: String,
-	checked: Boolean,
-	default: false
+	checked: Boolean
 });
 
 const Task = mongoose.model('Task', taskSchema);
