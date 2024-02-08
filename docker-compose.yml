@@ -1,0 +1,9 @@
+version: '2.24.5'
+
+services:
+  mongoDB:
+    image: mongo
+    ports:
+      - 8080:8080
+    container_name: tasksMongoDB
+    
